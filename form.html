@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <title>Smarty Admin</title>
+  <meta name="description" content="" />
+  <meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
+  <!-- mobile settings -->
+  <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+
+  <!-- WEB FONTS -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&amp;subset=latin,latin-ext,cyrillic,cyrillic-ext" rel="stylesheet" type="text/css" />
+
+  <!-- CORE CSS -->
+  <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- THEME CSS -->
+  <link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+  <link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+  <link href="assets/css/color_scheme/green.css" rel="stylesheet" type="text/css" id="color_scheme" />
+
+</head>
+<!--
+		.boxed = boxed version
+	-->
+
+<body>
+
+
+  <!-- WRAPPER -->
+  <div id="wrapper" class="clearfix container">
+
+    <!-- HEADER -->
+    <header id="header">
+      <!-- Logo -->
+      <span class="logo pull-left">
+					<img src="assets/images/logo_light.png" alt="admin panel" height="35" />
+				</span>
+
+    </header>
+    <!-- /HEADER -->
+
+    <!-- JAVASCRIPT FILES -->
+    <script type="text/javascript">
+      var plugin_path = 'assets/plugins/';
+    </script>
+    <script type="text/javascript" src="assets/plugins/jquery/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="assets/js/app.js"></script>
+
+    <!-- PAGE LEVEL SCRIPT -->
+    <script type="text/javascript">
+    </script>
+
+    <!-- Credify Form  -->
+    <form class="" action="http://127.0.0.1:8000/extras/credify" method="post" enctype="multipart/form-data" data-success="Sent! Thank you!" data-toastr-position="top-right">
+
+      <div class="form-group">
+        <div class="col-md-8">
+
+          <fieldset id="fieldset-personal">
+            <legend> Your Details</legend>
+
+            <!-- CRN -->
+            <div class="row">
+              <label>CRN *</label>
+              <div class="fancy-form">
+                <input type="text" name="crn" class="form-control" placeholder="CRN">
+
+                <!-- tooltip - optional, bootstrap tooltip can be used instead -->
+                <span class="fancy-tooltip top-left"> <!-- positions: .top-left | .top-right -->
+              		<em>CRN received via SMS</em>
+              	</span>
+              </div>
+            </div>
+
+            <!-- Mobile -->
+            <div class="row">
+              <label>Mobile *</label>
+              <div class="fancy-form">
+                <i class="fa fa-mobile"></i>
+                <input type="text" name="mobile" class="form-control" placeholder="10 digit mobile number">
+                <!-- tooltip - optional, bootstrap tooltip can be used instead -->
+                <span class="fancy-tooltip top-left"> <!-- positions: .top-left | .top-right -->
+              		<em>Mobile number</em>
+              	</span>
+              </div>
+            </div>
+
+
+            <!-- Confirm SMS -->
+            <div class="row">
+              <label class="radio">Confirmation SMS *</label>
+              <!-- radio -->
+              <div id="confirm_sms">
+                <input type="radio" name="confirm_sms" value="True" checked="checked">
+                <i></i> Yes
+                <input type="radio" name="confirm_sms" value="False" checked="">
+                <i></i> No (Application will not be processed)
+              </div>
+            </div>
+
+
+            <!-- Address -->
+            <div class="row">
+              <label>Physical Address *</label>
+              <!-- textarea -->
+              <div class="fancy-form">
+                <textarea rows="5" name="address" class="form-control word-count" data-maxlength="200" data-info="textarea-words-info" placeholder="Your Physical Place of Residence"></textarea>
+                <i class="fa fa-home"><!-- icon --></i>
+                <span class="fancy-hint size-11 text-muted">
+                    <strong>Hint:</strong> 200 words allowed!
+                  </span>
+              </div>
+            </div>
+
+
+            <!-- Aadhaar Number -->
+            <div class="row">
+              <label>Aadhaar Number *</label>
+              <div class="fancy-form">
+                <input type="text" name="aadhaar_number" class="form-control" placeholder="Your 12 digit Aadhaar Number">
+                <i class="fa fa-id-badge"></i>
+                <!-- tooltip - optional, bootstrap tooltip can be used instead -->
+                <span class="fancy-tooltip top-left"> <!-- positions: .top-left | .top-right -->
+              		<em>12 digit Aadhaar Number</em>
+              	</span>
+              </div>
+            </div>
+
+
+            <!-- Cibil Report -->
+            <div class="row">
+              <label>Cibil Report *</label>
+              <!-- fancy success -->
+              <div class="fancy-file-upload fancy-file-success">
+                <i class="fa fa-upload"></i>
+                <input type="file" class="form-control" name="cibil_report" onchange="jQuery(this).next('input').val(this.value);" />
+                <input type="text" class="form-control" placeholder="no file selected" readonly="" />
+                <span class="btn">Choose File</span>
+              </div>
+              You will get better interest rate on your loan if you provide CIBIL report. If you don't have the report, click <a href="https://www.cibil.com/creditscore/cibilscore-form-ggcs?gclid=CLTs3ZbIjtECFdgTaAodShgDFA&dclid=CK7W95bIjtECFYkRaAodjDgHHg">here</a>              to generate.
+            </div>
+
+
+            <!-- Education   -->
+            <div class="row">
+              <label>Highest Education Qualification *</label>
+              <div class="fancy-form fancy-form-select">
+                <select class="form-control select2" name="education">
+            		<option value="masters">Master's Degree</option>
+            		<option value="bachers">Bachelor's Degree</option>
+            		<option value="diploma">Diploma</option>
+                <option value="12th">12th Standard</option>
+            	</select>
+                <i class="fancy-arrow"></i>
+              </div>
+            </div>
+
+
+            <!-- Employment -->
+            <div class="row">
+              <label>Employment Status *</label>
+              <div class="fancy-form fancy-form-select" name="employment">
+                <select class="form-control select2">
+                <option value="salaried">Salaried</option>
+            		<option value="self_proffessional">Self Employed - Proffessional</option>
+            		<option value="self_business">Self Employed - Business</option>
+                <option value="unemployed">Unemployed</option>
+            	</select>
+                <i class="fancy-arrow"></i>
+              </div>
+            </div>
+
+            <!-- Employer -->
+            <div class="row">
+              <label>Employer Name *</label>
+              <div class="fancy-form">
+                <input type="text" name="employer" class="form-control" placeholder="Employer or Company Name">
+                <i class="fa fa-id-badge"></i>
+                <!-- tooltip - optional, bootstrap tooltip can be used instead -->
+                <span class="fancy-tooltip top-left"> <!-- positions: .top-left | .top-right -->
+              		<em>Employer Name</em>
+              	</span>
+              </div>
+            </div>
+
+            <!-- Job Title -->
+            <div class="row">
+              <label>Job Title *</label>
+              <div class="fancy-form">
+                <input type="text" name="job_title" class="form-control" placeholder="Your job title">
+                <i class="fa fa-id-badge"></i>
+                <!-- tooltip - optional, bootstrap tooltip can be used instead -->
+                <span class="fancy-tooltip top-left"> <!-- positions: .top-left | .top-right -->
+              		<em>Job Title</em>
+              	</span>
+              </div>
+            </div>
+
+            <!-- Industry -->
+            <div class="row">
+              <label>Industry *</label>
+              <div class="fancy-form">
+                <input type="text" name="industry" class="form-control" placeholder="Your service industry">
+                <i class="fa fa-id-badge"></i>
+                <!-- tooltip - optional, bootstrap tooltip can be used instead -->
+                <span class="fancy-tooltip top-left"> <!-- positions: .top-left | .top-right -->
+              		<em>Industry</em>
+              	</span>
+              </div>
+            </div>
+
+            <!-- Annual Income -->
+            <div class="row">
+              <label>Annual Income *</label>
+              <div class="fancy-form">
+                <input type="text" name="annual_income" class="form-control" placeholder="Your total annual income">
+                <i class="fa fa-id-badge"></i>
+                <!-- tooltip - optional, bootstrap tooltip can be used instead -->
+                <span class="fancy-tooltip top-left"> <!-- positions: .top-left | .top-right -->
+              		<em>Annual Income</em>
+              	</span>
+              </div>
+            </div>
+
+            <!-- Latest IT Return -->
+            <div class="row">
+              <label>Latest Income Tax Return*</label>
+              <!-- fancy success -->
+              <div class="fancy-file-upload fancy-file-success">
+                <i class="fa fa-upload"></i>
+                <input type="file" class="form-control required" name="it_return" onchange="jQuery(this).next('input').val(this.value);" />
+                <input type="text" class="form-control" placeholder="no file selected" readonly="" />
+                <span class="button">Choose File</span>
+              </div>
+            </div>
+
+            <!-- A/C Statement -->
+            <div class="row">
+              <label>Last 3 months account statement *</label>
+              <!-- fancy success -->
+              <div class="fancy-file-upload fancy-file-success">
+                <i class="fa fa-upload"></i>
+                <input type="file" class="form-control required" name="account_statement" onchange="jQuery(this).next('input').val(this.value);" />
+                <input type="text" class="form-control" placeholder="no file selected" readonly="" />
+                <span class="button">Choose File</span>
+              </div>
+              Compulsory if salaried
+            </div>
+
+            <!-- Salary Slip -->
+            <div class="row">
+              <label>Last 3 months salary slip*</label>
+              <!-- fancy success -->
+              <div class="fancy-file-upload fancy-file-success">
+                <i class="fa fa-upload"></i>
+                <input type="file" class="form-control required" name="salary_slip" onchange="jQuery(this).next('input').val(this.value);" />
+                <input type="text" class="form-control" placeholder="no file selected" readonly="" />
+                <span class="button">Choose File</span>
+              </div>
+            </div>
+
+            <!-- Credit Card Statement -->
+            <div class="row">
+              <label>Credit Card Statement *</label>
+              <!-- fancy success -->
+              <div class="fancy-file-upload fancy-file-success">
+                <i class="fa fa-upload"></i>
+                <input type="file" class="form-control required" name="credit_card_statement" onchange="jQuery(this).next('input').val(this.value);" />
+                <input type="text" class="form-control" placeholder="no file selected" readonly="" />
+                <span class="button">Choose File</span>
+              </div>
+              if Applicable
+            </div>
+
+            <!-- Outstanding Loan -->
+            <div class="row">
+              <label>Do you have outstanding loan?</label>
+              <div class="fancy-form">
+                <input type="text" name="outstanding_loan" class="form-control" placeholder="Enter in the form 'loan amount, interest rate, tenor'">
+                <i class="fa fa-id-badge"></i>
+                <!-- tooltip - optional, bootstrap tooltip can be used instead -->
+                <span class="fancy-tooltip top-left"> <!-- positions: .top-left | .top-right -->
+              		<em>Outstanding loan</em>
+              	</span>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset id='fieldset-social' class="margin-top-20">
+            <legend> Social Details</legend>
+
+            <!-- Facebook -->
+            <div class="row">
+              <label>Facebook</label>
+              <div class="fancy-form">
+                <input type="text" name="fb_profile" class="form-control" placeholder="Facebook Profile Link">
+
+                <!-- tooltip - optional, bootstrap tooltip can be used instead -->
+                <span class="fancy-tooltip top-left"> <!-- positions: .top-left | .top-right -->
+              		<em></em>
+              	</span>
+              </div>
+            </div>
+
+            <!-- Linkedin -->
+            <div class="row">
+              <label>Linkedin</label>
+              <div class="fancy-form">
+                <input type="text" name="linkedin_profile" class="form-control" placeholder="Linkedin Profile Link">
+
+                <!-- tooltip - optional, bootstrap tooltip can be used instead -->
+                <span class="fancy-tooltip top-left"> <!-- positions: .top-left | .top-right -->
+              		<em></em>
+              	</span>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset id='fieldset-loan' class="margin-top-20">
+            <legend> Loan Details</legend>
+
+            <!-- Loan Amount -->
+            <div class="row">
+              <label>Requested Loan Amount</label>
+              <div class="fancy-form">
+                <input type="text" name="loan_amount" class="form-control" placeholder="Requested Loan">
+
+                <!-- tooltip - optional, bootstrap tooltip can be used instead -->
+                <span class="fancy-tooltip top-left"> <!-- positions: .top-left | .top-right -->
+              		<em></em>
+              	</span>
+              </div>
+            </div>
+
+            <!-- Loan Description -->
+            <div class="row">
+              <label>Loan Description *</label>
+              <!-- textarea -->
+              <div class="fancy-form">
+                <textarea rows="5" name="loan_description" class="form-control word-count" data-maxlength="200" data-info="textarea-words-info" placeholder=""></textarea>
+                <i class="fa fa-home"><!-- icon --></i>
+                <span class="fancy-hint size-11 text-muted">
+                    <strong>Hint:</strong> 200 words allowed!
+                  </span>
+              </div>
+            </div>
+
+            <!-- Partial Amount -->
+            <div class="row">
+              <label class="radio">Are you Ok with only a part of the requested amount being disbursed to you?</label>
+              <!-- radio -->
+              <div id="partial_amount">
+                <input type="radio" name="partial_amount" value="True" checked="checked">
+                <i></i> Yes
+                <input type="radio" name="partial_amount" value="False" checked="checked">
+                <i></i> No
+              </div>
+            </div>
+
+            <!-- Change in duration -->
+            <div class="row">
+              <label class="radio">Are you Ok with loan disbursal for a different time duration than requested?</label>
+              <!-- radio -->
+              <div id="different_loan_period">
+                <input type="radio" name="different_loan_period" value="True" checked="checked">
+                <i></i> Yes
+                <input type="radio" name="different_loan_period" value="False" checked="checked">
+                <i></i> No
+              </div>
+            </div>
+
+            <!-- A/C Number -->
+            <div class="row">
+              <label>Bank A/C Number</label>
+              <div class="fancy-form">
+                <input type="text" name="bank_ac_number" class="form-control" placeholder="">
+
+                <!-- tooltip - optional, bootstrap tooltip can be used instead -->
+                <span class="fancy-tooltip top-left"> <!-- positions: .top-left | .top-right -->
+              		<em></em>
+              	</span>
+              </div>
+            </div>
+
+            <!-- Bank A/C Holder Name -->
+            <div class="row">
+              <label>Bank A/C Holder Name</label>
+              <div class="fancy-form">
+                <input type="text" name="bank_ac_name" class="form-control" placeholder="">
+
+                <!-- tooltip - optional, bootstrap tooltip can be used instead -->
+                <span class="fancy-tooltip top-left"> <!-- positions: .top-left | .top-right -->
+              		<em></em>
+              	</span>
+              </div>
+            </div>
+
+            <!-- Bank -->
+            <div class="row">
+              <label>Bank Name *</label>
+              <div class="fancy-form fancy-form-select">
+                <select class="form-control select2" name="bank_name">
+                <option value="citi">Citibank</option>
+            		<option value="hdfc">HDFC Bank</option>
+            		<option value="standard_chartered">Standard Chartered Bank</option>
+                <option value="sbi">State Bank of India</option>
+                <option value="icici">ICICI Bank</option>
+                <option value="axis">Axis Bank</option>
+                <option value="kotak_mahindra">Kotak Mahindra Bank</option>
+                <option value="karnataka">Karnataka Bank</option>
+                <option value="canara">Canara Bank</option>
+                <option value="corporation">Corporation Bank</option>
+                <option value="sbm">State Bank of Mysore</option>
+                <option value="syndicate">Syndicate Bank</option>
+                <option value="vysya">Vysya Bank</option>
+                <option value="vijaya">Vijaya Bank</option>
+                <option value="other">Other</option>
+            	</select>
+                <i class="fancy-arrow"></i>
+              </div>
+            </div>
+
+            <!-- Other Bank -->
+            <div class="row">
+              <label>If Other Bank</label>
+              <div class="fancy-form">
+                <input type="text" name="bank_name_other" class="form-control" placeholder="">
+
+                <!-- tooltip - optional, bootstrap tooltip can be used instead -->
+                <span class="fancy-tooltip top-left"> <!-- positions: .top-left | .top-right -->
+              		<em></em>
+              	</span>
+              </div>
+            </div>
+
+            <!-- IFSC Code -->
+            <div class="row">
+              <label>IFSC Code</label>
+              <div class="fancy-form">
+                <input type="text" name="bank_ifsc" class="form-control" placeholder="">
+
+                <!-- tooltip - optional, bootstrap tooltip can be used instead -->
+                <span class="fancy-tooltip top-left"> <!-- positions: .top-left | .top-right -->
+              		<em></em>
+              	</span>
+              </div>
+            </div>
+
+            <!-- Comments -->
+            <div class="row">
+              <label>If any comments/requests</label>
+              <!-- textarea -->
+              <div class="fancy-form">
+                <textarea rows="5" name="comments" class="form-control word-count" data-maxlength="200" data-info="textarea-words-info" placeholder=""></textarea>
+                <i class="fa fa-home"><!-- icon --></i>
+                <span class="fancy-hint size-11 text-muted">
+                    <strong>Hint:</strong> 200 words allowed!
+                  </span>
+              </div>
+            </div>
+
+            <!-- I agree -->
+            <div class="row">
+              <label class="radio">Do you confirm that all details provide above are correct and recent, and to the best of your knowledge? Please note that the final discretion lies with Cready Technologies Pvt. Ltd. The loan agreement will be made based on the details provided here.</label>
+              <!-- radio -->
+              <div id="i_agree">
+                <input type="radio" name="i_agree" value="True" checked="checked">
+                <i></i> Yes
+                <input type="radio" name="i_agree" value="False" checked="checked">
+                <i></i> No
+              </div>
+            </div>
+
+          </fieldset>
+
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <button type="submit" class="btn btn-3d btn-teal btn-xlg btn-block margin-top-30">
+    				SEND APPLICATION
+    				<span class="block font-lato">We'll get back to you within 48 hours</span>
+    			</button>
+        </div>
+      </div>
+
+    </form>
+
+</body>
+
+</html>

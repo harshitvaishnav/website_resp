@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<!--[if IE 8]>			<html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>			<html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->	
+<html> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8" />
+		<title>Credy - Credit is ready</title>
+		<meta name="keywords" content="HTML5,CSS3,Template" />
+		<meta name="description" content="" />
+		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
+		<!-- mobile settings -->
+		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+		<!-- WEB FONTS : use %7C instead of | (pipe) -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
+
+		<!-- CORE CSS -->
+		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+		<!-- THEME CSS -->    
+		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+		<!-- PAGE LEVEL SCRIPTS -->
+		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/color_scheme/green.css" rel="stylesheet" type="text/css" id="color_scheme" />
+	</head>
+
+	<!--
+		AVAILABLE BODY CLASSES:
+		
+		smoothscroll 			= create a browser smooth scroll
+		enable-animation		= enable WOW animations
+
+		bg-grey					= grey background
+		grain-grey				= grey grain background
+		grain-blue				= blue grain background
+		grain-green				= green grain background
+		grain-blue				= blue grain background
+		grain-orange			= orange grain background
+		grain-yellow			= yellow grain background
+		
+		boxed 					= boxed layout
+		pattern1 ... patern11	= pattern background
+		menu-vertical-hide		= hidden, open on click
+		
+		BACKGROUND IMAGE [together with .boxed class]
+		data-background="assets/images/boxed_background/1.jpg"
+	-->
+	<body class="smoothscroll enable-animation">
+
+		<!-- wrapper -->
+		<div id="wrapper">
+			<!-- 
+				AVAILABLE HEADER CLASSES
+
+				Default nav height: 96px
+				.header-md 		= 70px nav height
+				.header-sm 		= 60px nav height
+
+				.noborder 		= remove bottom border (only with transparent use)
+				.transparent	= transparent header
+				.translucent	= translucent header
+				.sticky			= sticky header
+				.static			= static header
+				.dark			= dark header
+				.bottom			= header on bottom
+				
+				shadow-before-1 = shadow 1 header top
+				shadow-after-1 	= shadow 1 header bottom
+				shadow-before-2 = shadow 2 header top
+				shadow-after-2 	= shadow 2 header bottom
+				shadow-before-3 = shadow 3 header top
+				shadow-after-3 	= shadow 3 header bottom
+
+				.clearfix		= required for mobile menu, do not remove!
+
+				Example Usage:  class="clearfix sticky header-sm transparent noborder"
+			-->
+			<div id="header" class="transparent clearfix header-sm noshadow noborder">
+
+				<!-- TOP NAV -->
+				<header id="topNav">
+					<div class="container">
+
+						<!-- Mobile Menu Button -->
+						<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+							<i class="fa fa-bars"></i>
+						</button>
+
+						<!-- Logo -->
+						<a class="logo pull-left padding-10" href="index.html">
+							<img src="assets/images/credy_logo_dark_back.png">
+						</a>
+
+						<!-- 
+							Top Nav 
+							
+							AVAILABLE CLASSES:
+							submenu-dark = dark sub menu
+						-->
+						<div class="navbar-collapse pull-right nav-main-collapse collapse">
+							<nav class="nav-main">
+                                <ul id="topMain" class="nav nav-pills nav-main">
+									<li class="h4">
+										<a href="http://test.credy.in">
+											Borrow
+										</a>
+									</li>
+                                    
+									<li class="h4">
+										<a href="http://test.credy.in">
+											Invest
+										</a>										
+									</li>
+                                    
+									<li>
+										<a class="h4" href="http://test.credy.in">
+											Learn
+										</a>										
+									</li>                                    
+
+								</ul>
+
+							</nav>
+						</div>
+
+					</div>
+				</header>
+				<!-- /Top Nav -->
+
+			</div>
+            
+			<section class="height-500" id="slider" style="background:url('assets/images/backgrounds/home_splash_dark.png')">
+				<div class="overlay dark-1"><!-- dark overlay [0 to 9 opacity] --></div>
+			
+                <div class="container width-400 margin-top-100" align="center">
+                            <h2>
+								Borrow on Credy 
+							</h2>
+                            
+                            <br>
+                        
+                            <h3 align="center">
+                                Loans worth <span class="countTo weight-400" data-speed="2500">12</span> cr requested till now
+                            </h3>
+                    
+                            <br>
+                            
+                            <h4 class="fullwidth">
+                                Disbursal in 24 hrs, Online Process
+							</h4>
+
+							<a class="btn btn-white btn-default btn-lg nomargin wow bounceIn" data-wow-delay="0.4s" href="#">Borrow Now</a>
+                        </div>               
+			</section>
+
+            <section class="tab-content active padding-bottom-50 grain-grey" id="borrow">
+                <div class="padding-left-130 padding-right-130">
+                <h2 class="padding-top-80" align="center">
+                    Why Credy?
+                </h2>
+                <p class="padding-bottom-10" align="center">
+                    Simple, fast and low-cost. We understand your needs and are here to help.
+                </p>
+                <!--Borrower Features -->
+    
+                <div class="row padding-left-70 padding-right-70">
+
+                    <div class="col-md-6">
+
+                        <div class="box-icon box-icon-center box-icon-round box-icon-transparent box-icon-large box-icon-content">
+                            <div class="box-icon-title">
+                                <span class="size-80 noborder icon-How-it-works-5"></span>
+                                <h2>Fast Approval</h2>
+                            </div>
+                            <p class="padding-left-40 padding-right-40">We have a digitized process and strive to make approval and disbursal in 24 hrs</p>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6">
+
+                        <div class="box-icon box-icon-center box-icon-round box-icon-transparent box-icon-large box-icon-content">
+                            <div class="box-icon-title padding-bottom-10">
+                                <span class="size-70 noborder icon-Reasonable-Rates"></span>
+                                <h2>Reasonable Rates</h2>
+                            </div>
+                            <p class="padding-left-40 padding-right-40">Our rates are amongst the most competitive, due to our efficient process. Get a <a href="https://www.google.com"> free quote</a></p>
+                        </div>
+
+                    </div>
+
+                </div> 
+
+                <br>
+                
+                <div class="row">
+
+                    <div class="col-md-6">
+
+                        <div class="box-icon box-icon-center box-icon-round box-icon-transparent box-icon-large box-icon-content">
+                            <div class="box-icon-title">
+                                <span class="size-70 noborder icon-Free-Cibil-Report"></span>
+                                <h2>Free CIBIL report</h2>
+                            </div>
+                            <p class="padding-left-40 padding-right-40 padding-bottom-15">Get a new CIBIL report and we reimburse the fees when you borrow. Learn about <a href="https://www.cibil.com/help-center"> CIBIL reports</a></p>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6">
+
+                        <div class="box-icon box-icon-center box-icon-round box-icon-transparent box-icon-large box-icon-content">
+                            <div class="box-icon-title padding-bottom-20">
+                                <span class="size-50 noborder fa fa-random"></span>
+                                <h2>Flexibility</h2>
+                            </div>
+                            <p class="padding-left-40 padding-right-40 padding-bottom-40">Borrow for durations starting from 3 months to 3 years, amounts from Rs 10,000 to Rs 2 lakh </p>
+                        </div>
+
+                    </div>
+
+                </div>  
+                <div class="padding-top-60" align="center">
+                    <i class="size-20 icon-App-Only-Loans-01"></i>
+                    <p class="credycolor wow flash infinite" align="center" data-wow-duration="4s">
+                        Mobile app launching soon!
+                    </p>
+                </div>                    
+            </div>
+            </section>
+
+            <section>
+                <div class="splash-gradient-grey">
+                    <h2 class="padding-top-80" align="center">
+                        Simple Online Process       
+                    </h2>
+
+                    <p align="center">
+                       So easy, you will borrow again and again! 
+                    </p>                                      
+
+                    <ul class="process-steps nav nav-justified">
+                        <li class="#">
+                            <a href="active" align="center"></a>
+                            <h5>Upload Details</h5>
+                            <br>
+                            <p>5 min process. Start now!</p>
+                        </li>
+                        <li class="#">
+                            <a href="#"><i class=""></i></a>
+                            <h5>Credy Approval</h5>
+                            <br>
+                            <p>We aim to give approvals in 6 hours</p>
+                        </li>
+                        <li class="#">
+                            <a href="#"><i></i></a>
+                            <h5>Verify Aadhaar and Sign Agreement</h5>
+                            <br>
+                            <p align="center">Congrats! Expect money in bank in 12 hours</p>
+                        </li>                    
+                    </ul>            
+
+                    <div class="padding-40" align="center">
+                        <a class="btn btn-default btn-lg" href="#">Borrow Now</a>                               
+                    </div>
+                </div>
+                
+            </section>
+
+            <section>
+                <h2 class="padding-top-80" align="center">
+                    Who Should Borrow?
+                </h2>
+
+                <div class="row">
+                <div class="col-md-6 col-sm-4">
+
+                    <!-- BOX 2 -->
+                    <div class="box-static box-transparent box-border-top box-border-top padding-30">
+
+                        <div class="box-title margin-bottom-30">
+                            <div class="toggle toggle-transparent-body">
+                                <h3 align="center">
+                                    Borrow via Credy For
+                                </h3>
+                                <div class="toggle">
+                                    <label>Urgent requirements</label>
+                                    <div class="toggle-content">
+                                        <p>Bank paperwork takes time. If you have an urgent cash need, like a medical expense, Credy helps you get money quickly. </p>
+                                    </div>
+                                </div>
+
+                                <div class="toggle">
+                                    <label>Enhancing lifestyle</label>
+                                    <div class="toggle-content">
+                                        <p>Borrowing at the right time can help you improve your lifestyle. It can be for a good wedding, an edcational certification or travelling - whatever defines your next lifestyle goal. </p>
+                                    </div>
+                                </div>
+
+                                <div class="toggle">
+                                    <label>Refinancing loans & credit card bills</label>
+                                    <div class="toggle-content">
+                                        <p>If you borrowed at a high interest rate before, or need to spread EMI over more time, borrowing on Credy can reduce your immediate financial burden.</p>
+                                    </div>
+                                </div>
+
+                                <div class="toggle">
+                                    <label>Reaching salary day</label>
+                                    <div class="toggle-content">
+                                        <p>One week away from salary and out of money? Don't fret, take a short loan, you won't even feel the interest charges</p>
+                                    </div>
+                                </div>                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /BOX 2 -->
+
+                </div>
+                
+                <div class="col-md-6 col-sm-4">
+
+                    <!-- BOX 2 -->
+                    <div class="box-static box-transparent box-border-top padding-30">
+                    
+                        <h3 align="center">
+                            Keep in Mind
+                        </h3>
+                        <div class="row item-box padding-20">
+                        <div class="col-md-5 col-sm-4">                                    
+                            <h4 class="credycolor">Repayment capacity</h4>
+                        </div>
+                        
+                        <div class="col-md-7 col-sm-4">                                    
+                            <label>We approve customers with a source of regular net income and some savings. </label>
+                        </div>
+                        </div>
+                        
+                        <div class="row item-box padding-20">
+                        <div class="col-md-5 col-sm-4">                                    
+                            <h4 class="credycolor">Financial discipline</h4>
+                        </div>
+                        
+                        <div class="col-md-7 col-sm-4">                                    
+                            <label>We take financial discipline seriously, and so should you.</label>
+                        </div>
+                        </div>                        
+                    </div>
+                    <!-- /BOX 2 -->
+                </div>
+                
+            </div>
+            </section>
+            
+            <section class="padding-bottom-50 fullwidth">
+                <div class="padding-left-100 padding-right-100">
+                <h2 class="padding-top-80" align="center">
+                    Customers Speak
+                </h2>     
+
+                <p class="padding-bottom-50" align="center">
+                   They benefited due to timely credit. So can you.
+                </p>                
+
+
+                <!-- 
+                    data-plugin-options:
+                        "transitionStyle":"fadeUp" (fade,backSlide,goDown,fadeUp)
+
+                    Note: remove class="rounded" from the img for squared image!
+                -->
+                <div class="testimonial-bordered splash-gradient-grey">
+                    <div class="owl-carousel text-center owl-testimonial nomargin" data-plugin-options='{"singleItem": true, "autoPlay": 4000, "navigation": false, "pagination": true, "transitionStyle":"fade"}'>
+
+                        <div class="testimonial">
+                            <div class="testimonial-content nopadding">
+                                <p class=""><i>
+                                    Appreciate your quick all-around help. I have got the [amount] and I am utilizing the same for my urgent requirements. Looking forward for a sustainable long term relationship [..] Excellent Customer Service.</i></p>
+                                <cite>
+                                    Zabiulla                                
+                                </cite>
+                                <br>
+                                Required urgent loan related to medical expense
+                            </div>
+                        </div>
+
+                        <div class="testimonial">
+                            <div class="testimonial-content nopadding">
+                                <p><i>Thank you all for the exceptional service! I too look forward to continued relationship with Credy.</i></p>
+                                <cite>
+                                    Lakshminarayana                                
+                                </cite>
+                                <br>
+                                Borrowed to refinance existing loan
+                            </div>
+                        </div> 
+
+                        <div class="testimonial">
+                            <div class="testimonial-content nopadding">
+                                <p><i>Thanks for your great help and support.</i></p>
+                                <cite>
+                                    Muthu                                
+                                </cite>
+                                <br>
+                                Borrowed to settle credit card bills
+                            </div>
+                        </div>                    
+
+
+                    </div>
+                </div> 
+            </div>
+            </section>
+            
+            <section class="splash-gradient-green">
+            <h2 class="padding-top-20" align="center">
+                Questions?
+            </h2>     
+                
+            <div class = "row padding-bottom-30" align="center">    
+                <div class="col-md-4 col-md-4"></div>
+                <div class="col-md-2 col-md-2"><a class="btn transparent  btn-default btn-lg nomargin" href="#">Refer FAQs</a></div>
+                <div class="col-md-2 col-md-2"><a class="btn transparent btn-default btn-lg nomargin" href="#">Write to Us</a></div>
+                <div class="col-md-4 col-md-4"></div>
+            </div>
+                
+			<footer id="footer">
+				<div class="container">
+
+					<div class="row">
+						
+						<div class="col-md-4">
+							<!-- Footer Logo -->
+							<img class="footer-logo" src="assets/images/credy_logo_dark_back_small.png" alt="" />
+
+							<!-- Small Description -->
+							<p>credit is ready</p>
+						</div>
+
+						<div class="col-md-4">
+
+							<!-- Links -->
+							<h4 class="letter-spacing-1">EXPLORE CREDY</h4>
+							<ul class="footer-links list-unstyled">
+								<li><a href="#">About Us</a></li>
+                                <li><a href="#">Team</a></li>
+								<li><a href="#">Learn about credit</a></li>
+								<li><a href="#">Contact Us</a></li>
+                                <li><a href="#">Careers</a></li>
+							</ul>
+							<!-- /Links -->
+
+						</div>                        
+                        
+						<div class="col-md-4">
+
+							<!-- Latest Blog Post -->
+							<h4 class="letter-spacing-1">WHAT'S NEW</h4>
+							<ul class="footer-posts list-unstyled">
+								<li>
+									<a href="#">Launched Android app!</a>
+									<small>29 June 2015</small>
+								</li>
+								<li>
+									<a href="#">Credy is Y Combinator funded!</a>
+									<small>29 June 2015</small>
+								</li>
+								<li>
+									<a href="#">Blog: Digitized India, Efficient India</a>
+									<small>29 June 2015</small>
+								</li>
+							</ul>
+							<!-- /Latest Blog Post -->
+
+						</div>
+					</div>
+
+				</div>
+
+				<div class="copyright">
+					<div class="container">
+						<ul class="pull-right nomargin list-inline mobile-block">
+							<li><a href="#">Terms &amp; Conditions</a></li>
+							<li>&bull;</li>
+							<li><a href="#">Privacy</a></li>
+						</ul>
+						&copy; All Rights Reserved, Company LTD
+					</div>
+				</div>
+			</footer>
+
+		</div>
+		<!-- /wrapper -->
+
+
+		<!-- SCROLL TO TOP -->
+		<a href="#" id="toTop"></a>
+
+
+		<!-- PRELOADER -->
+		<div id="preloader">
+			<div class="inner">
+				<span class="loader"></span>
+			</div>
+		</div><!-- /PRELOADER -->
+
+
+		<!-- JAVASCRIPT FILES -->
+		<script type="text/javascript">var plugin_path = 'assets/plugins/';</script>
+		<script type="text/javascript" src="assets/plugins/jquery/jquery-2.2.3.min.js"></script>
+        <script type="text/javascript" src="assets/js/app.js"></script>
+		<script type="text/javascript" src="assets/js/scripts.js"></script>
+    </body>
+</html>
